@@ -34,6 +34,7 @@
             <button
               mat-flat-button
               color="primary"
+              class="add-book"
               (click)="addBookToReadingList(b)"
               [disabled]="b.isAdded"
             >
@@ -49,8 +50,8 @@
   <div class="empty">
     <p>
       Try searching for a topic, for example "<a (click)="searchExample()"
-    >JavaScript</a
-    >".
+        >JavaScript</a
+      >".
     </p>
   </div>
 </ng-template>
