@@ -15,7 +15,7 @@
 
 <ng-container *ngIf="searchTerm; else empty">
   <div class="book-grid">
-    <div class="book" data-testing="book-item" *ngFor="let b of books">
+    <div class="book" data-testing="book-item" *ngFor="let b of books$ | async">
       <div class="book--title">
         {{ b.title }}
       </div>
@@ -49,8 +49,8 @@
   <div class="empty">
     <p>
       Try searching for a topic, for example "<a (click)="searchExample()"
-        >JavaScript</a
-      >".
+    >JavaScript</a
+    >".
     </p>
   </div>
 </ng-template>
